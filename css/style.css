@@ -1,0 +1,493 @@
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+.container {
+    width: 95vw;
+    position: relative;
+    display: block;
+    border: 2px solid red;
+    margin: 0 auto;
+}
+
+.sub-container {
+    position: relative;
+    width: 100%;
+    border: 2px solid rgb(255, 149, 0);
+    padding: 0;
+    margin: 5px auto;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.red {
+    color: red;
+}
+
+.bold {
+    font-weight: 1000;
+}
+
+header {
+    text-align: center;
+    border: 2px solid black;
+    height: 200px;
+    background: url('../pictures/Header-bg.jpg');
+    background-size: cover;
+    border: 0;
+    border-radius: 1em;
+    padding-top: 10px;
+}
+
+.header {
+    font-size: 36px;
+    color: white;
+}
+
+.sub-header {
+    color: white;
+}
+
+.insta-btn {
+    background: url('../pictures/icons/insta.png');
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    background-size: cover;
+    margin: 0 20px 5px 5px;
+    float: right;
+    border-radius: 10px;
+}
+
+
+.fb-btn {
+    background: url('../pictures/icons/fb.png');
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    background-size: cover;
+    margin: 0 5px 5px 5px;
+    float: right;
+    border-radius: 10px;
+}
+
+.yt-btn {
+    background: url('../pictures/icons/yt.png');
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    background-size: cover;
+    margin: 0 5px 5px 5px;
+    float: right;
+    border-radius: 10px;
+}
+
+.yt-btn:hover,
+.fb-btn:hover,
+.insta-btn:hover {
+    opacity: .7;
+}
+
+.intro-vid {
+    background: red;
+    width: 80%;
+    height: calc(80vw * 9/16);
+    padding: 10px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.title-label {
+    font-size: 45px;
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    margin: 1rem auto;
+}
+
+
+.top-testimony {
+    padding: 1%;
+    border: 2px solid black;
+    width: 93vw;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+}
+
+.testi-pic {
+    margin: 2 auto;
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+    display: inline;
+}
+
+img {
+    border-radius: 15px;
+}
+
+.testi-quote-area {
+    margin: auto;
+    width: 50vw;
+    border: 1px solid blue;
+    position: relative;
+}
+
+.quote-text {
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.motivation-box {
+    width: 70vw;
+    border: 3px solid blue;
+    background: rgb(44, 43, 43);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.faq{
+    width: 90%;
+    border: 2px solid black;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+
+
+
+
+
+/*Sign up stuff*/
+
+.signup-block {
+    position: fixed;
+    padding: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100px;
+    background: black;
+    margin: 0 auto;
+    bottom: 0px;
+    margin-left: -8px;
+    line-height: 75px;
+}
+
+
+
+/*
+
+.big-box {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgb(243, 1, 243);
+    display: inline-block;
+}
+
+.left-box {
+    width: 49%;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 1);
+    float: left;
+
+}
+.right-box {
+    width: 49%;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 1);
+    float: right;
+}
+
+
+.signup-box{
+    margin: 0 auto;
+    border: 2px solid green;
+    position: relative;
+}
+
+.signup-component {
+    width: 80%;
+    position: relative;
+    display: block;
+    border: 2px solid cyan;
+    margin: 0 auto;
+}
+
+#signup-btn {
+    display: block;
+    position: relative;
+    width: 70%;
+    height: 40px;
+    margin: 0 auto;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+}
+*/
+
+/*all test*/
+.allclient-box {
+    display: flex;
+}
+
+.clientbox {
+    width: 33%;
+    border: 2px solid green;
+}
+
+.clientbox-container {
+    display: block;
+    width: 100%;
+    border: 2px solid red;
+}
+
+.clientbox-component {
+    width: 90%;
+    margin: 5px auto;
+    border: 2px solid blue;
+}
+
+
+/* Scroll Buttons*/
+#scroll-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    bottom: 190px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+#scroll-bottom {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    bottom: 120px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.up-btn,
+.down-btn {
+    margin: 0;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+
+
+button {
+    padding: 0;
+}
+
+.white {
+    color: white;
+}
+
+/*Font stuff*/
+.big-text {
+    font-size: 40px;
+    margin: 0.6rem;
+}
+
+.med-text {
+    font-size: 30px;
+    margin: 0.6rem;
+}
+
+.small-text {
+    font-size: 20px;
+    margin: 0.6rem;
+}
+
+/*txt align*/
+
+.center {
+    text-align: center;
+}
+
+/*list margin*/
+
+.tips {
+    margin-left: 2rem;
+}
+
+
+@media only screen and (min-device-width: 701px) {
+    .right {
+        float: right;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .signup-block:hover {
+        background: rgb(25, 25, 25);
+    }
+
+    /*button hover*/
+    #scroll-top:hover {
+        background: rgb(139, 139, 139);
+    }
+
+    #scroll-bottom:hover {
+        background: rgb(139, 139, 139);
+    }
+}
+
+/*Mobile media query max width 600px*/
+
+@media only screen and (max-device-width: 700px) {
+    .header {
+        font-size: 30px;
+        font-weight: 900;
+        color: white;
+    }
+
+    .sub-header {
+        font-size: 22px;
+        color: white;
+    }
+
+    .top-testimony {
+        padding: 2%;
+        margin: 0 auto;
+        width: 90vw;
+        border: 2px solid black;
+        display: inline-block;
+        position: relative;
+    }
+
+    .testi-pic {
+        margin: 0 auto;
+        width: 85vw;
+        height: 85vw;
+        position: relative;
+        display: block;
+        border: 2px solid green;
+    }
+
+    .testi-quote-area {
+        margin: 0 auto;
+        width: 85vw;
+        border: 1px solid blue;
+        position: relative;
+    }
+
+    .quote-text {
+        text-align: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    /*all test mob*/
+    .allclient-box {
+        display: block;
+    }
+    
+    .clientbox {
+        width: 100%;
+        border: 2px solid green;
+    }
+    
+
+
+    /*Sign up*/
+    /*
+    .sub-container {
+        width: 100%;
+        border: 2px solid rgb(255, 149, 0);
+        display: block;
+        padding: 0;
+        margin: 5px auto;
+        background: rgb(0, 0, 0);
+        border-radius: 10px;
+    }
+    
+    .big-box {
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid rgb(243, 1, 243);
+        position: relative;
+        display: inline-block;
+    }
+    
+    .left-box {
+        width: 100%;
+        position: relative;
+        border: 2px solid rgba(0, 0, 0, 1);
+        float: left;
+    
+    }
+    .right-box {
+        width: 100%;
+        position: relative;
+        border: 2px solid rgba(0, 0, 0, 1);
+        float: left;
+    }
+    
+    
+    .signup-box{
+        margin: 0 auto;
+        border: 2px solid green;
+        position: relative;
+    }
+    
+    .signup-component {
+        width: 90%;
+        position: relative;
+        display: block;
+        border: 2px solid cyan;
+        margin: 0 auto;
+    }
+    
+    #signup-btn {
+        display: block;
+        position: relative;
+        width: 90%;
+        height: 40px;
+        margin: 0 auto;
+    }
+    
+    input[type=text] {
+        width: 100%;
+        margin: 0 auto;
+    }
+*/
+
+
+
+
+
+
+
+
+
+
+
+    .title-label {
+        font-size: 35px;
+        color: rgba(0, 0, 0, 1);
+        text-align: center;
+        margin: 1rem auto;
+    }
+
+    /*Font stuff*/
+    .big-text {
+        font-size: 30px;
+    }
+
+    .med-text {
+        font-size: 20px;
+    }
+
+    .small-text {
+        font-size: 13px;
+    }
+}
