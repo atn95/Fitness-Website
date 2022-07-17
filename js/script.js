@@ -37,6 +37,7 @@ async function loadConfigs() {
 	}
 	createWelcomeMessage(welcomeMsg);
 	writeCommonProbsSol(commonMistakes);
+	writeYoutubeVid(youtubeVidId);
 }
 
 async function loadFAQData() {
@@ -93,8 +94,22 @@ function writeCommonProbsSol(problems) {
 		let motivationBox = document.createElement(`div`);
 		motivationBox.innerHTML = prob.mistake;
 		probDiv.append(motivationBox);
+		solutionDiv.innerHTML = prob.solution;
 		motivationBox.classList.add(`motivation-box`);
 	});
+}
+
+function writeYoutubeVid(id) {
+	let youtubeHtmlEmbed = `<iframe
+			width='100%'
+			height='100%'
+			src='https://www.youtube.com/embed/${id}'
+			title='YouTube video player'
+			frameborder='0'
+			allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+			allowfullscreen></iframe>`;
+
+	document.querySelector('.intro-vid').innerHTML = youtubeHtmlEmbed;
 }
 
 function createWelcomeMessage(msg) {
