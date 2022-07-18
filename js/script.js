@@ -3,8 +3,13 @@
 const url = `https://docs.google.com/spreadsheets/d/`;
 const sheetID = `13ziuTPB171zB5CGR2Q8qZ2wqtUBcgW1ZKSvvJXTbPbE`;
 const query = `/gviz/tq?`;
+const scrollTopBtn = document.querySelector(`#scroll-top`);
+const scrollBotBtn = document.querySelector(`#scroll-bottom`);
+
 let clientList = [];
 let mobile = window.matchMedia('screen and (max-width:600px)').matches;
+let mouseDown = false;
+let scrollDirection = 0;
 
 let youtube, facebook, instagram;
 
@@ -22,19 +27,24 @@ async function fetchJson(id, sheetQuery) {
 async function loadConfigs() {
 	let config = await fetchJson(sheetsData, `sheet=config`);
 	console.log(`config`, config);
-	let welcomeMsg = config[0].c[1].v;
-	let youtubeVidId = config[1].c[1].v;
-	youtube = config[2].c[1].v;
-	facebook = config[3].c[1].v;
-	instagram = config[4].c[1].v;
+	let faviconLink = config[0].c[1].v;
+	let header = config[1].c[1].v;
+	let subhead = config[2].c[1].v;
+	let welcomeMsg = config[3].c[1].v;
+	let youtubeVidId = config[4].c[1].v;
+	youtube = config[5].c[1].v;
+	facebook = config[6].c[1].v;
+	instagram = config[7].c[1].v;
 	let commonMistakes = [];
-	for (let i = 5; i < config.length; i += 2) {
+	for (let i = 8; i < config.length; i += 2) {
 		let mistakes = {
 			mistake: config[i].c[1].v,
 			solution: config[i + 1].c[1].v,
 		};
 		commonMistakes.push(mistakes);
 	}
+	loadFavicon(faviconLink, header);
+	loadHeader(header, subhead);
 	createWelcomeMessage(welcomeMsg);
 	writeCommonProbsSol(commonMistakes);
 	writeYoutubeVid(youtubeVidId);
@@ -83,6 +93,22 @@ async function loadClientData() {
 		}
 	});
 	createHtml(clientList);
+}
+
+function loadHeader(header, subheader) {
+	document.querySelector(`#site-title`).innerHTML = header;
+	document.querySelector(`#site-subtitle`).innerHTML = subheader;
+}
+
+function loadFavicon(iconLink, webTitle) {
+	const link = document.createElement(`link`);
+	link.id = `favicon`;
+	link.rel = `shortcut icon`;
+	link.href = iconLink;
+	const title = document.createElement(`title`);
+	title.innerText = webTitle;
+	document.head.append(link);
+	document.head.append(title);
 }
 
 function writeCommonProbsSol(problems) {
@@ -274,6 +300,14 @@ function createNormalClient(clients) {
 		}
 	}
 }
+
+scrollTopBtn.addEventListener('click', (e) => {
+	window.scrollBy(0, -e.pageY);
+});
+
+scrollBotBtn.addEventListener('click', (e) => {
+	window.scrollBy(0, document.body.scrollHeight);
+});
 
 function load() {
 	loadConfigs();
